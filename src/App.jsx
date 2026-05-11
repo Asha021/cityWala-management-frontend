@@ -7,7 +7,8 @@ import './App.css'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import AdminLogin, { AdminBanners, AdminCategories, AdminDashboard, AdminUsers } from './pages/admin/AdminLogin'
-import AdminSubcategories from '../../frontend/src/pages/admin/AdminSubcategories'
+import AdminSubcategories from './pages/admin/AdminSubcategories'
+// import AdminSubcategories from '../../frontend/src/pages/admin/AdminSubcategories'
 // import AdminSubcategories from '../../frontend/src/pages/admin/AdminSubcategories'
 
 
