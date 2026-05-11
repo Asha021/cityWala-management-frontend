@@ -11,7 +11,7 @@ import AdminSubcategories from '../../frontend/src/pages/admin/AdminSubcategorie
 // import AdminSubcategories from '../../frontend/src/pages/admin/AdminSubcategories'
 
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
   
   const ProtectedUser = ({ children }) => {
