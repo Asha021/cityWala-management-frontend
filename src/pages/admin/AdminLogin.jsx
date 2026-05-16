@@ -808,7 +808,8 @@ export function AdminBanners() {
   const [title, setTitle] = useState('')
   const [file, setFile] = useState(null)
   const [saving, setSaving] = useState(false)
-  const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+  // const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+  const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://citywala-backend.onrender.com'
 
   // FIX: use /banners/all for admin (includes inactive)
   const loadBanners = () => API.get('/banners/all').then(r => setBanners(r.data || [])).catch(() => API.get('/banners').then(r => setBanners(r.data || [])))
@@ -949,7 +950,8 @@ export function AdminAdvertise() {
   const [form, setForm] = useState({ advertise_name: '' })
   const [file, setFile] = useState(null)
   const [saving, setSaving] = useState(false)
-  const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+  // const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+  const BASE = import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://citywala-backend.onrender.com'
 
   const loadAds = () => API.get('/advertise').then(r => setAds(r.data || []))
   useEffect(() => { loadAds() }, [])
