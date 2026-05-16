@@ -101,6 +101,22 @@ export function AdminSidebar({ active }) {
         }
       ]
     },
+    {
+      name: "Plans",
+      icon: "fa-layer-group",
+      children: [
+        {
+          name: "All Plans",
+          link: "/admin/plans",
+          icon: "fa-list"
+        },
+        {
+          name: "Add Plan",
+          link: "/admin/plans/add",
+          icon: "fa-plus"
+        }
+      ]
+    },
     // {
     //   name: "Banners",
     //   link: "/admin/banners",
@@ -205,7 +221,7 @@ export function AdminSidebar({ active }) {
                           active === sub.link
                             ? "#fff"
                             : "#94a3b8",
-                         background:
+                        background:
                           active === sub.link
                             ? "#1e293b"
                             : "transparent",
@@ -623,7 +639,7 @@ export function AdminCategories() {
                     className="form-control mb-2"
                     placeholder="Category name"
                     value={form.name}
-                    onChange={(e)=>{
+                    onChange={(e) => {
                       const name = e.target.value;
                       setForm(prev => ({
                         ...prev,
@@ -711,7 +727,7 @@ export function AdminCategories() {
                 </form>
               </div>
             </div>
-           <div className="md:w-8/12 max-h-screen overflow-x-scroll">
+            <div className="md:w-8/12 max-h-screen overflow-x-scroll">
               <div className="card p-3">
                 <h6 className="fw-bold mb-3">All categories ({categories.length})</h6>
                 {loading ? (
